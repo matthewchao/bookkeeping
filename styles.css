@@ -1,67 +1,215 @@
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
+* {
+  box-sizing: border-box;
 }
 
-.wrapper > div {
-  flex-basis: 300px;
+.wrapper {
+  display: grid;
+  grid-gap: 1em;
+  padding: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
+
 
 .accountSection {
-  flex-grow: 0;
+  grid-column: 1 / 4;
+  display:grid;
+  grid-template-rows: auto auto auto;
 }
 
 .transactionSection {
-  flex-grow: 0;
+  grid-column: 1/ 4;
 }
 
 .rightSection {
-  flex-grow: 0;
+  grid-column: 1 / 4;
 }
 
 
-.accountSection {
-  display: flex;
-  flex-direction: column;
+form.addAccount {
+  display: grid;
+  grid-template-columns:1fr 20vw auto;
+  grid-template-rows:24px 1fr;
+  grid-column-gap: .5em;
+  padding: 0.5em;
+  margin: 0 0 0 0;
+}
+
+form.addAccount > * {
+  width:100%;
+}
+
+form.addAccount input {
+  grid-row: 2 /3;
+}
+
+form.addAccount label[for="newAccount"] {
+  grid-column: 1/4;
+  grid-row: 1;
+}
+
+form.addAccount label[for="newBalance"] {
+  grid-column: 2/4;
+  grid-row: 1;
+}
+
+form.addAccount label[for="addAccountButton"] {
+  grid-column: 3/4;
+  grid-row: 1;
 }
 
 
-.accountBody, .transactionBody {
-  display: flex;
-  flex-direction: column;
+
+
+div.account {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: .5em;
+  padding: .5em;
 }
 
-
-
-
-div.account {  
-  display: flex;
-  flex-direction: row;
+div.account input {
+  margin: 0 0 0 0;
 }
 
 div.account > div.name {
-  flex-basis: 240px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+div.name div.deleteAccount {
+  grid-column: 2/3;
 }
 
 div.account > div.balance {
-  
+
 }
 
 div.account > div.name {
   display: flex;
 }
+
+/* form.addAccount label[for="addAccountButton"] {
+  grid-row: 2/4;
+} */
+
+
+@media all and (min-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-gap: 1.5em;
+    padding: 1.5em;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .wrapper {
+    display: grid;
+    grid-gap: 2em;
+    padding: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* form.addAccount input {
+  min-width:0;
+} */
+
+
+/* form.addAccount label[for='newAccount'] {
+  grid-area: a;
+}
+
+form.addAccount label[for='newBalance'] {
+  grid-area: b;
+}
+
+form.addAccount input#newAccount {
+  grid-area: d;
+}
+
+form.addAccount input#newBalance {
+  grid-area: e;
+}
+
+form.addAccount input[type='submit'] {
+  grid-area: f;
+} */
+
+
+
+
+
+
+/* <form id="addAccountForm" class="addAccount">
+  <div id="newAccountDiv">
+    <label for="newAccount">New account name:</label>
+    <input type="text" name="newAccount" id="newAccount" required>
+  </div>
+  <div id="newBalanceDiv">
+    <label for="newBalance">Opening balance:</label>
+    <input type="number" id="newBalance" name="newBalance" placeholder="0.00" step=".01" required>
+  </div>
+  <div id="accountButtonDiv">
+    <label for="addAccountButton"></label>
+    <input name="addAccountButton" type="submit" value="add">
+  </div>
+
+</form> */
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (min-width: 34em) and (max-width: 49.9375em) {
+
+  .wrapper {
+    display: grid;
+    grid-gap: 1.5em;
+    padding: 1.5em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+.transactionBody {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
 
 
 
 
 
 /*See https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties/33856609#33856609  */
-div.name > div.deleteAccount {
-  margin-left: auto;
-}
 
 
-.addAccount {
+/* .addAccount {
   display: flex;
 }
 
@@ -70,7 +218,7 @@ div.name > div.deleteAccount {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
+} */
 
 
 

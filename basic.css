@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+
 
 html, body {
   padding: 10px;
@@ -11,48 +9,40 @@ html, body {
 
 .wrapper {
   background-color: grey;
-  padding: 10px;
 }
 
 .accountSection {
-  border: 2px solid purple;
-  border-radius: 5px;
+  /* border: 2px solid purple;
+  border-radius: 5px; */
 }
 
 .transactionSection {
-  border: 2px solid purple;
-  border-radius: 5px;
+  /* border: 2px solid purple;
+  border-radius: 5px; */
 }
 
 .rightSection {
-  border: 2px solid purple;
-  border-radius: 5px;
+  /* border: 2px solid purple;
+  border-radius: 5px; */
 }
 
 
 
 
 .accountSection > .accountHeader {
-  background-color: green;	
+  background-color: green;
   font-size: large;
   font-weight: bold;
 }
 
-.accountSection > .accountBody {
-  background-color: transparent;
-}
-
-
-
-
-.account {  
+.accountSection {
 /*   border-radius: 3px; */
   background-color: cornflowerblue;
 
 }
 
 .account > * {
-    
+
 /*   border: 3px solid purple;
   border-radius: 2px; */
   background-color: transparent;
@@ -68,7 +58,8 @@ html, body {
 }
 
 
-
+form.addAccount label[for="newAccount"] {
+}
 
 
 
@@ -79,26 +70,26 @@ html, body {
 
 
 .transactionSection > .transactionHeader {
-  background-color: green;	
+  background-color: green;
   font-size: large;
   font-weight: bold;
 }
 
-.transactionSection > .transactionBody {
+.transactionSection {
   background-color: lightcoral;
 }
 
 
 
 
-.transaction {  
+.transaction {
 /*   border-radius: 3px; */
   background-color: transparent;
 
 }
 
 .transaction > * {
-    
+
 /*   border: 3px solid purple;
   border-radius: 2px; */
   background-color: transparent;
@@ -108,4 +99,3 @@ div.transactionNames > * {
   border: 1px solid black;
   border-radius: 3px;
 }
-
