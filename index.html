@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matt's Accounts</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Accounts</h1>
+    
+    <!-- A MULTIPLE SELECTOR>
+    <div>
+      <form action="/transactions/" method="post">
+      <select name="target" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+      </select>
+      <input type="submit">
+      </form>
+    </div>
+  -->    
+
+    <div class="wrapper">
+      
+      <div class="accountSection">
+        
+        
+        <div class="account accountHeader">
+          <div class="name">
+            Account
+          </div>
+          <div class="balance">
+            Balance
+          </div>
+        </div>
+        
+        <!--
+        //account divs to go here
+        -->
+        <div class="accountBody">
+          
+        </div>
+        
+        
+        <form id="addAccountForm" class="addAccount">
+          <div id="newAccountDiv">
+            <label for="newAccount">New account name:</label>       
+            <input type="text" name="newAccount" id="newAccount" required>
+          </div>
+          <div id="newBalanceDiv">
+            <label for="newBalance">Opening balance:</label>
+            <input type="number" id="newBalance" name="newBalance" placeholder="0.00" step=".01" required>              
+          </div>
+          
+          <div id="accountButtonDiv">
+            <label for="addAccountButton"></label>
+            <input name="addAccountButton" type="submit" value="add">
+
+          </div>              
+
+        </form>                     
+        
+
+        
+      </div>
+      
+      
+      
+      <div id="transactionList" class="transactionSection">
+        
+        
+        <div class="transactionHeader">
+          <div class="transaction">
+            <div class="transactionNames">
+              Transaction
+            </div>
+            <div class="transactionAmount">
+              Amount
+            </div>
+          </div>
+        </div>
+        
+        <!--
+        //account divs to go here
+        -->
+        <div class="transactionBody">
+          
+        </div>
+        
+        
+        
+          <form id="addTransactionForm" class="addTransaction">
+            <div id="sourceAccountDiv">
+              <label for="sourceAccount">From: </label>                             
+              <select name="sourceAccount" id="sourceAccount" required>
+                <option value="" disabled selected>Select source</option>
+              </select>
+            
+            </div>
+            <div id="targetAccountDiv">
+              <label for="targetAccount">To:</label>       
+              <select name="targetAccount" id="targetAccount" required>
+                <option value="" disabled selected>Select target</option>
+              </select>            
+            </div>
+            <div id="transactionAmountDiv">
+              <label for="transactionAmount">Amount:</label>
+              <input type="number" id="transactionAmount" name="transactionAmount" placeholder="0.00" step=".01" required>              
+            </div>
+            <div id="transactionButtonDiv">
+              <label for="addTransactionButton"></label>
+              <input name="addTransactionButton" type="submit" value="Add">
+
+            </div>              
+          
+            
+          </form>                
+        
+      </div>
+      
+      
+      
+      <div class="rightSection">
+        (Account-specific information to be added here)
+      </div>
+      
+    </div>
+    <!--
+    <div>
+      <button onclick="handlers.toggleAll()">Toggle All</button>
+    </div>
+    
+    <div>
+      <button onclick="handlers.addTodo()" id="addButton">Add</button>
+      <input id="addTodoTextInput" type="text">
+    </div>
+    
+    <div>
+      <button onclick="handlers.changeTodo()">Change Todo</button>
+      <input id="changeTodoPositionInput" type="number">
+      <input id="changeTodoTextInput" type="text">
+    </div>
+    
+    
+    <div>
+      <button onclick="handlers.deleteTodo()">Delete</button>
+      <input id="deleteTodoPositionInput" type="number">
+    </div>
+    
+    <div>
+      <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      <input id="toggleCompletedPositionInput" type="number">
+    </div>
+    
+    -->
+    <!--
+    The below list displays the accounts
+    -->
+    <script src="Event.js"></script>
+    <script src="Store.js"></script>
+    <script src="accountsModel.js"></script>
+    <script src="accountsView.js"></script>
+    <script src="accountsController.js"></script>
+    <script src="app.js"></script>
+    
+  </body>
+</html>
