@@ -1,0 +1,141 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper > div {
+  flex-basis: 300px;
+}
+
+.accountSection {
+  flex-grow: 0;
+}
+
+.transactionSection {
+  flex-grow: 0;
+}
+
+.rightSection {
+  flex-grow: 0;
+}
+
+
+.accountSection {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.accountBody, .transactionBody {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+div.account {  
+  display: flex;
+  flex-direction: row;
+}
+
+div.account > div.name {
+  flex-basis: 240px;
+}
+
+div.account > div.balance {
+  
+}
+
+div.account > div.name {
+  display: flex;
+}
+
+
+
+
+
+/*See https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties/33856609#33856609  */
+div.name > div.deleteAccount {
+  margin-left: auto;
+}
+
+
+.addAccount {
+  display: flex;
+}
+
+#accountButtonDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+.transaction {
+  display: flex;
+}
+
+div.transaction > * {
+  flex-grow: 1;
+}
+
+div.transactionNames {
+  display:flex;
+}
+
+div.transactionNames > div.targetName {
+  margin-left: auto;
+}
+
+div.transactionAmount {
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.transactionAmount > .deleteTransaction {
+/*   margin-left: auto; */
+}
+
+
+
+
+.addTransaction {
+  display: flex;
+}
+
+.addTransaction > #sourceAccountInput {
+}
+
+.addTransaction > #targetAccountInput {
+}
+
+#transactionAmountDiv {
+}
+
+
+#transactionAmountDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+#transactionButtonDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#transactionAmountDiv > input {
+  width: 100%
+}
